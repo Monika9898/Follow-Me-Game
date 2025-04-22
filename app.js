@@ -12,15 +12,19 @@ let highScore = localStorage.getItem("highScore") || 0;
 
 
 let h2=document.querySelector("h2");
-document.addEventListener("keydown",function(){
-  if(started==false){
-    console.log("game is started");
-    started=true;
+let startBtn = document.getElementById("startBtn");
 
+document.addEventListener("keydown", startGame); // For keyboard
+startBtn.addEventListener("click", startGame);   // For mobile
+
+function startGame() {
+  if (!started) {
+    started = true;
+    startBtn.style.display = "none";
     levelUp();
   }
- 
-});
+}
+
 
 function gameFlash(btn){
     btn.classList.add("flash");
@@ -85,9 +89,11 @@ function btnPress(){
 }
 
 let allBtns=document.querySelectorAll(".btn");
-for(btn of allBtns){
-  btn.addEventListener("click",btnPress)
+for (btn of allBtns) {
+  btn.addEventListener("click", btnPress);       // Desktop clicks
+  btn.addEventListener("touchstart", btnPress);  // Mobile taps
 }
+
 
 function reset(){
   started=false;

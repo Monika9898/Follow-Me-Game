@@ -30,3 +30,18 @@ body{
 .userflash{
     background-color: green;
 }
+#startBtn {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 20px auto;
+    display: block;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  #startBtn:hover {
+    background-color: #45a049;
+  }
+  
