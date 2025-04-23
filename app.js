@@ -89,10 +89,16 @@ function btnPress(){
 }
 
 let allBtns=document.querySelectorAll(".btn");
-for (btn of allBtns) {
-  btn.addEventListener("click", btnPress);       // Desktop clicks
-  btn.addEventListener("touchstart", btnPress);  // Mobile taps
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+for (let btn of allBtns) {
+  if (isTouchDevice) {
+    btn.addEventListener("touchstart", btnPress);
+  } else {
+    btn.addEventListener("click", btnPress);
+  }
 }
+
 
 
 function reset(){
