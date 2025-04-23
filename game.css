@@ -1,5 +1,6 @@
 body{
     text-align: center;
+
 }
 .btn{
     height: 200px;
@@ -8,6 +9,22 @@ body{
     border:10px solid black;
     margin: 2.5rem;
 }
+@keyframes dance {
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(5deg) scale(1.1); }
+    50% { transform: rotate(-5deg) scale(1.1); }
+    75% { transform: rotate(5deg) scale(1.1); }
+    100% { transform: rotate(0deg) scale(1); }
+  }
+  
+  .dance {
+    animation: dance 0.6s infinite;
+  }
+  
+.btn:hover {
+    animation: dance 0.6s infinite;
+  }
+  
 .btn-container{
     display: flex;
     justify-content: center;
@@ -19,10 +36,12 @@ body{
     background-color:#d95980;
 }
 .green{
-    background-color: #819ff9;
+    background-color: 	#59d9b2;
+    
 }
 .purple{
-    background-color:#63aac0;
+    background-color:#f1c232
+    ;
 }
 .flash{
     background-color: antiquewhite;
