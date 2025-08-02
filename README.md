@@ -40,7 +40,7 @@
 
   * **HTML5:** For the basic structure of the game.
   * **CSS3:** For styling and animations, giving the game its look and feel.
-  * **JavaScript (ES6+):** For the core game logic, sequence generation, user interaction, and score management.
+  * **JavaScript:** For the core game logic, sequence generation, user interaction, and score management.
 
 -----
 
@@ -79,3 +79,4 @@ Your highest score is automatically saved in your browser's **Local Storage**. T
 ## Contributing
 
 Feel free to fork this repository, make improvements, and submit pull requests. All contributions are welcome\!
+
