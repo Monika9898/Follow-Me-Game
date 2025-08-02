@@ -1,54 +1,68 @@
-body{
+body {
     text-align: center;
-
+    background-color: #2c3e50;
+   
 }
-.btn{
+h1,h2{
+    color: antiquewhite;
+}
+
+.btn {
     height: 200px;
     width: 200px;
     border-radius: 20%;
-    border:10px solid black;
+    border: 10px solid white;
     margin: 2.5rem;
+    transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out; /* Add transition for smoother flashes/presses */
 }
+
 @keyframes dance {
-    0% { transform: rotate(0deg) scale(1); }
-    25% { transform: rotate(5deg) scale(1.1); }
-    50% { transform: rotate(-5deg) scale(1.1); }
-    75% { transform: rotate(5deg) scale(1.1); }
-    100% { transform: rotate(0deg) scale(1); }
-  }
-  
-  .dance {
+    0% { transform: rotate(0deg); } /* Removed scale */
+    25% { transform: rotate(2deg); } /* Reduced rotation */
+    50% { transform: rotate(-2deg); } /* Reduced rotation */
+    75% { transform: rotate(2deg); } /* Reduced rotation */
+    100% { transform: rotate(0deg); } /* Removed scale */
+}
+
+.dance {
     animation: dance 0.6s infinite;
-  }
-  
+}
+
 .btn:hover {
     animation: dance 0.6s infinite;
-  }
-  
-.btn-container{
+}
+
+.btn-container {
     display: flex;
     justify-content: center;
 }
-.yellow{
-    background-color:#f99b45;
+
+.yellow {
+    background-color: #f99b45;
 }
-.red{
-    background-color:#d95980;
+
+.red {
+    background-color: #d95980;
 }
-.green{
-    background-color: 	#59d9b2;
-    
+
+.green {
+    background-color: #59d9b2;
 }
-.purple{
-    background-color:#f1c232
-    ;
+
+.purple {
+    background-color: #9b59b2; /* Changed to a more distinct purple as it was previously yellow */
 }
-.flash{
+
+.flash {
     background-color: antiquewhite;
-}    
-.userflash{
-    background-color: green;
+    /* No transform here, rely on the global transition or add a subtle one if desired */
 }
+
+.userflash {
+    background-color: green;
+    /* No transform here, rely on the global transition or add a subtle one if desired */
+}
+
 #startBtn {
     padding: 10px 20px;
     font-size: 18px;
@@ -59,8 +73,8 @@ body{
     border: none;
     border-radius: 8px;
     cursor: pointer;
-  }
-  #startBtn:hover {
+}
+
+#startBtn:hover {
     background-color: #45a049;
-  }
-  
+}
