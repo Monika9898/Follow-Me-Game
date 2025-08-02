@@ -58,7 +58,7 @@ function levelUp(){
 function checkAns(idx){ 
   if(userSeq[idx] === gameSeq[idx]){
     if(userSeq.length === gameSeq.length){
-      setTimeout(levelUp, 1000);
+      setTimeout(levelUp, 2000);
     }
   } else {
     // Update high score if needed
@@ -71,7 +71,7 @@ function checkAns(idx){
 
     document.querySelector("body").style.backgroundColor = "red";
     setTimeout(() => {
-      document.querySelector("body").style.backgroundColor = "white";
+      document.querySelector("body").style.backgroundColor = "#2c3e50";
     }, 150);
 
     reset();
